@@ -1,0 +1,7 @@
+<div>
+  {% for post in object_list %}
+    <a href="{% url 'post_detail' post.id %}">
+      <p>{{post.message}}</p>
+    </a>
+  {% endfor %}
+</div>
