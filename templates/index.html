@@ -1,7 +1,12 @@
 <div>
+<ul>
   {% for post in object_list %}
-    <a href="{% url 'post_detail' post.id %}">
-      <p>{{post.message}}</p>
+  <li>
+    <span>{{ post.createDate }}</span>
+    <a href="{% url 'post' post.id %}">
+      <span>{{post.message}}</span>
     </a>
+    </li>
   {% endfor %}
+</ul>
 </div>
