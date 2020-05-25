@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('insta', '0001_initial'),
+        ('insta2', '0001_initial'),
     ]
 
     operations = [
