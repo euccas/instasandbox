@@ -1,4 +1,4 @@
-"""instaupdate URL Configuration
+"""instasandbox URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,10 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from insta.views import TestView, PostsView, PostDetailView
+from Insta.views import HelloWorld 
 
 urlpatterns = [
-  path('test/', TestView.as_view(), name="test"),
-  path('posts/', PostsView.as_view(), name="posts"),
-  path('post/<int:pk>/', PostDetailView.as_view(), name="post_detail")
+  path('', HelloWorld.as_view(), name="helloworld")
 ]
