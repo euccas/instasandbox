@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-from Insta.views import HelloWorld 
+from insta.views import TestView 
 
 urlpatterns = [
-  path('', HelloWorld.as_view(), name="helloworld")
+  path('test', TestView.as_view(), name="test")
 ]
