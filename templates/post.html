@@ -1,9 +1,20 @@
-<p>
-{{ object.createDate }}
-</p>
-<p>
-{{ object.message }}
-</p>
-<p>
-{{ object.quote}}
-</p>
+<div>
+  <a href="{% url 'posts' %}">Back to all posts</a>
+</div>
+
+<div>
+  <p>
+  {{ object.createDate }}
+  </p>
+  <p>
+  {{ object.message }}
+  </p>
+  <p>
+  {{ object.quote}}
+  </p>
+</div>
+
+<div>
+  <a href="{% url 'edit_post' object.id %}">Edit</a>
+  <a href="{% url 'delete_post' object.id %}">Delete</a>
+</div>
