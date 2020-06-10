@@ -20,7 +20,8 @@ from insta2.views import SignUpView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('update/', include('insta2.urls')),
+    path('', include('insta2.urls')),
     path('auth/', include('django.contrib.auth.urls')),
-    path('auth/signup/', SignUpView.as_view(), name="signup")
+    path('auth/signup/', SignUpView.as_view(), name="signup"),
+    path('api/', include('api.urls')),
 ]

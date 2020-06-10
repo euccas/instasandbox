@@ -25,7 +25,7 @@ SECRET_KEY = ')sua_2l#14394#k-f*88w@-*0l=x!%t4b=hmrjs%e58c!ri=^k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'insta2',
+    'api',
 ]
 
 MIDDLEWARE = [

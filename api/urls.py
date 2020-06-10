@@ -1,4 +1,4 @@
-"""insta2 URL Configuration
+"""instasandbox URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -15,13 +15,8 @@ Including another URLconf
 """
 from django.urls import path
 
-from insta2.views import TestView, PostsView, PostDetailView, PostCreateView, PostEditView, PostDeleteView
+from api.views import PostAPIView
 
 urlpatterns = [
-  path('test/', TestView.as_view(), name="test"),
-  path('posts/', PostsView.as_view(), name="posts"),
-  path('post/<int:pk>/', PostDetailView.as_view(), name="post"),
-  path('post/new/', PostCreateView.as_view(), name="create_post"),
-  path('post/edit/<int:pk>/', PostEditView.as_view(), name="edit_post"),
-  path('post/delete/<int:pk>/', PostDeleteView.as_view(), name="delete_post")
+  path('', PostAPIView.as_view()),
 ]
